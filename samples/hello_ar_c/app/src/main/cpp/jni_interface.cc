@@ -19,6 +19,7 @@
 #include <jni.h>
 
 #include "hello_ar_application.h"
+#include <jni.h>
 
 #define JNI_METHOD(return_type, method_name) \
   JNIEXPORT return_type JNICALL              \
@@ -106,6 +107,11 @@ JNI_METHOD(jboolean, hasDetectedPlanes)
 (JNIEnv *, jclass, jlong native_application) {
   return static_cast<jboolean>(
       native(native_application)->HasDetectedPlanes() ? JNI_TRUE : JNI_FALSE);
+}
+
+JNI_METHOD(void, gameUpdate)
+(JNIEnv *, jclass, jlong native_application) {
+    native(native_application)->gameUpdate();
 }
 
 JNIEnv *GetJniEnv() {

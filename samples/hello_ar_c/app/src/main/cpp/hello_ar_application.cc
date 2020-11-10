@@ -126,6 +126,23 @@ void HelloArApplication::OnSurfaceCreated() {
   plane_renderer_.InitializeGlContent(asset_manager_);
 }
 
+void HelloArApplication::gameUpdate() {
+
+  //Check if there are any andy's in the scene
+  if (anchors_.size() > 0)
+  {
+    for (int i = 0; i < anchors_.size(); i++)
+    {
+       ArPose out_pose;
+       ArAnchor_getPose(ar_session_, anchors_[i].anchor, &out_pose);
+
+    }
+
+  }
+
+
+}
+
 void HelloArApplication::OnDisplayGeometryChanged(int display_rotation,
                                                   int width, int height) {
   LOGI("OnSurfaceChanged(%d, %d)", width, height);

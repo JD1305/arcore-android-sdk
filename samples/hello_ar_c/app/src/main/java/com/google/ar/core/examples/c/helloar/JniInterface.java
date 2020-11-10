@@ -66,6 +66,8 @@ public class JniInterface {
   public static native void onSettingsChange(
       long nativeApplication, boolean isInstantPlacementEnabled);
 
+  public static native void gameUpdate(long nativeApplication);
+
   public static Bitmap loadImage(String imageName) {
 
     try {

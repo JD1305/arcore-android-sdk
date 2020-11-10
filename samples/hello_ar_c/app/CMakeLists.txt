@@ -42,6 +42,30 @@ add_library(hello_ar_native SHARED
            src/main/cpp/texture.cc
            src/main/cpp/util.cc)
 
+add_library(gef_abertay SHARED
+        /animation
+        /assets
+        /audio
+        /external/libpng
+        /external/SFML/Audio
+        /external/SFML/binary
+        /external/SFML/lib/32bit
+        /external/SFML/lib/64bit
+        /external/SFML/System
+        /external/zlib
+        /graphics
+        /input
+        /maths
+        platform/d3d11/audio
+        platform/d3d11/graphics
+        platform/d3d11/input
+        platform/d3d11/system
+        platform/null/graphics
+        /system
+        /tools/fbx2scn
+        )
+
+
 target_include_directories(hello_ar_native PRIVATE
            src/main/cpp)
 target_link_libraries(hello_ar_native
