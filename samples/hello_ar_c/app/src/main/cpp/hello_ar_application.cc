@@ -23,6 +23,8 @@
 #include "arcore_c_api.h"
 #include "plane_renderer.h"
 #include "util.h"
+#include "../gef_abertay/maths/vector4.h"
+
 
 namespace hello_ar {
 namespace {
@@ -136,6 +138,8 @@ void HelloArApplication::gameUpdate() {
        ArPose out_pose;
        ArAnchor_getPose(ar_session_, anchors_[i].anchor, &out_pose);
 
+       out_pose.
+       gef::Vector4 gefVec;
     }
 
   }

@@ -55,6 +55,9 @@ class HelloArApplication {
   // is created.
   void OnSurfaceCreated();
 
+  void gameUpdate();
+
+
   // OnDisplayGeometryChanged is called on the OpenGL thread when the
   // render surface size or display rotation changes.
   //
